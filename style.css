@@ -1,22 +1,78 @@
-#calculator {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 5px;
-    margin-top: 10px;
-  }
-  
-  #display {
-    grid-column: 1 / span 4;
-    height: 50px;
-    font-size: 24px;
-    text-align: right;
-  }
-  
-  button {
-    background-color: #eee;
-    border: none;
-    border-radius: 5px;
-    font-size: 24px;
-    height: 50px;
-  }
-  
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #eee;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.screen {
+  grid-column: 1 / -1;
+  background-color: #fff;
+  font-size: 24px;
+  padding: 10px;
+  text-align: right;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button {
+  background-color: #f2f2f2;
+  color: #333;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ccc;
+}
+
+.clear {
+  grid-column: 1 / span 2;
+}
+
+.backspace {
+  grid-column: 3;
+}
+
+.plus-minus {
+  grid-column: 4;
+}
+
+.divide {
+  grid-row: 2;
+}
+
+.multiply {
+  grid-row: 3;
+}
+
+.subtract {
+  grid-row: 4;
+}
+
+.add {
+  grid-row: 5;
+}
+
+.zero {
+  grid-column: 1 / span 2;
+}
+
+.decimal {
+  grid-column: 3;
+}
+
+.equals {
+  grid-row: 6;
+  grid-column: 4;
+}
